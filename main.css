@@ -187,10 +187,18 @@ h2 {
 .nav a, .home_nav a {
     
     text-decoration: none;
-    padding: 1em;
+    padding-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-bottom: 0em;
     font-size: 1.5em;
     font-family: 'Comfortaa', cursive;
     color: #542344;
+}
+
+.nav a:hover, .home_nav a:hover {
+    
+    border-bottom: 2px solid #66cc33;
 }
 
 input {
@@ -212,7 +220,7 @@ input:focus {
 
 button {
 	width: 50px;
-	height: 50px;
+/*	height: 50px;*/
 	background: none;
 	border: none;
 	position: absolute;
@@ -230,11 +238,6 @@ button:focus {
 	font-size: 3em;
 }
 
-.search-container {
-    
-    
-    
-}
 
 .topnav .search-container button {
 /*
@@ -266,7 +269,7 @@ p {
     grid-template-columns: 1fr 1fr;
     background-color: rgba(255,255,255, 0.7);
     padding: 3em;
-    padding-bottom: 30em;
+    padding-bottom: 10em;
     max-width: 1100px;
     margin: 0 auto;
     grid-column-gap: 2em;   
@@ -301,6 +304,71 @@ h4 {
     
     font-size: 1.5em;
     font-family: 'Comfortaa', cursive;
+}
+
+/* Help Page Styling */
+
+.help {
+    
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: rgba(255,255,255,0.6);
+    
+}
+
+/* Search Results styling */
+
+h4 a {
+    
+    text-decoration: none;
+    color: #542344;
+    
+    border-bottom: 0px solid #542344;
+}
+
+.search_item p {
+    
+    margin-top: -1.5em;
+}
+
+.search_item {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.search_none {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+}
+
+h4 a:hover {
+    
+    border-bottom: 1px solid #542344;
+    
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
+}
+
+h3 {
+    
+    font-family: 'Comfortaa', cursive;
+    color: #542344;
+    text-align: center;
+    
+}
+
+#no {
+    
+    font-size: 3em;
 }
 
 /* Tablet */
@@ -456,6 +524,7 @@ p {
         padding: .5em;
     }
     
+    
     .item {
         
         display: grid;
@@ -494,6 +563,11 @@ p {
     #main_container {
         
         grid-template-columns: 1fr;
+    }
+    
+    #no {
+        
+        font-size: 2em;
     }
 
 }
