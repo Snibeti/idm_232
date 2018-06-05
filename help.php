@@ -21,21 +21,9 @@
             </object>
         
         </div>
-        
-        <div class="topnav">
-            <div class="nav">
-            <a href="index.html">Home</a>
-            <a class="active" href="recipe.html">Recipes</a>
-            <a href="help.html">Help</a>
-                
-            </div>
-            <div class="search-container">
-                <form action="search_results.html">
-                    <input type="text" placeholder="Search Recipes.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
+
+        <?php include "includes/_header.php"; ?>        
+
     </div>
     <h2>Help</h2>
     <div class="help">

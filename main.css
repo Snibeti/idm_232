@@ -198,7 +198,7 @@ h2 {
     border-bottom: 2px solid #66cc33;
 }
 
-input {
+input .search {
     
     background: none;
 	border-bottom: 2px solid #66CC33;
@@ -207,6 +207,15 @@ input {
 	border-right: none;
 	width: 200px;
 	height: 30px;
+}
+
+input .submit_difficulty {
+    
+    border-bottom: none;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-bottom: 0em;
+    
 }
 
 input:focus {
@@ -477,7 +486,7 @@ p {
     
     text-align: center;
     font-family: 'Comfortaa', cursive;
-    font-size: 1.75em;
+    font-size: 1em;
     margin-bottom: .25em;
     text-align: left;
     }
