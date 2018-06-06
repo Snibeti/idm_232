@@ -27,10 +27,19 @@
     </div>
     <h2>Help</h2>
     <div class="help">
-   <h4>How to do this:</h4>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis eos, corrupti molestiae itaque accusantium voluptates, veniam possimus. Velit, beatae! Id maiores nostrum consectetur mollitia veniam, odio, blanditiis vero illum consequatur quibusdam sit non, tenetur! Iusto quas ad tempore quibusdam dolorum error, voluptatum. Deserunt voluptate, perferendis totam reprehenderit ad, quidem aut!</p>
-   <h4>How to do that:</h4>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ullam possimus sed autem nisi, ex laudantium ipsum aut pariatur non.</p>
+    
+   <p>Snap Pea is an online repository containing detailed healthy food recipes, encouraging chefs of all skill levels to break out and try something new.</p>
+   <h4>How to navigate the site:</h4>
+   <p>Navigating is very simple, you've already made it this far! To browse recipes, click on the 'recipes' menu item at the top of the page. 
+   From there, you can scroll up and down the page and click onto a recipe to see it's ingredients and instructions to make.</p>
+   <h4>How to search for an item:</h4>
+   <p>To search for an item, click onto the box on the top right of the page. Type in what you are looking for and hit the search icon.</p>
+   <ul>
+       <li>For example, you might want a meal with chicken for dinner. Simply type in the word 'chicken', hit the search icon, and voila!</li>
+   </ul> 
+   
+   <h4>How to filter options:</h4>
+   <p>Looking for a challenge? Have you just begun to learn how to cook? No problem! To filter items, click on the check boxes corresponding to whatever difficulty you are looking for in your recipe.</p>
     </div>
     
 </body>

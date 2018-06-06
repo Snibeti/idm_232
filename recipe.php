@@ -57,11 +57,11 @@ if (!$result) {
     
 	<!-- PAGE CONTENT -->
     <h2>Recipes</h2>
-            <form>
+            <form id="filter">
                <p>
-                <input type="checkbox" name="filter[]" value ="Easy"/>Easy
-                <input type="checkbox" name="filter[]" value ="Intermediate"/>Intermediate
-                <input type="checkbox" name="filter[]" value ="Advanced"/>Advanced
+                <input type="radio" name="filter[]" value ="Easy"/>Easy
+                <input type="radio" name="filter[]" value ="Intermediate"/>Intermediate
+                <input type="radio" name="filter[]" value ="Advanced"/>Advanced
                 <input  class="submit_difficulty" type="submit" name="formSubmit" value="Filter" />
                </p>
             </form>
@@ -70,13 +70,15 @@ if (!$result) {
             while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <div class="item">
+          <a href="recipe_page.php?id=<?php echo $row['recipe_id'];?>">
            <div class="item_img">
                 <img src="assets/images/<?php echo $row['img_folder']; ?>/<?php echo $row['recipe_thumb']; ?>.jpg">
             </div>
             <div class="item_txt">
-                <h3><a href="recipe_page.php?id=<?php echo $row['id'];?>"><?php echo $row['recipe_title']; ?></a></h3>
+                <h3><a href="recipe_page.php?id=<?php echo $row['recipe_id'];?>"><?php echo $row['recipe_title']; ?></a></h3>
             <p><?php char_limit($row['recipe_desc'], 100); ?></p>
             </div>
+            </a>
         </div>
 	    <?php
                 

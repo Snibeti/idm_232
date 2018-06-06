@@ -126,6 +126,27 @@ body {
     text-align: center;
 }
 
+    
+#filter p {
+    
+    display: inline-block;
+    width: auto;
+    padding: 1em;
+    margin-left: 1em;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.submit_difficulty {
+    
+    background-color: #89be59;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
 .item h3 {
     
     text-align: center;
@@ -169,7 +190,9 @@ img {
 h2 {
     
     text-align: center;
-    font-size: 4em;
+    font-size: 6em;
+    margin-top: 0em;
+    margin-bottom: .5em;
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
     color: #542344;
@@ -353,6 +376,7 @@ h4 a {
     padding-left: 0.5em;
     padding-right: 0.5em;
     text-align: center;
+    font-size: 1.15em;
 }
 
 h4 a:hover {
@@ -369,6 +393,7 @@ h3 {
     font-family: 'Comfortaa', cursive;
     color: #542344;
     text-align: center;
+    font-size: 1.2em;
     
 }
 
@@ -489,6 +514,11 @@ p {
     font-size: 1em;
     margin-bottom: .25em;
     text-align: left;
+    }
+    
+    h3 a {
+        
+        text-decoration: none;
     }
     
     #top {
