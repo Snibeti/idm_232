@@ -64,9 +64,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
     max-width: 1500px;
-    margin: 0 auto;
     margin-left: 1em;
     margin-right: 1em;
+    margin: 0 auto;
     
 }
 
