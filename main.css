@@ -23,6 +23,11 @@ body {
     
 }
 
+.radio_inp input {
+    
+    padding-right: 2px;
+}
+
 #top {
     
     display: grid;
@@ -55,6 +60,7 @@ body {
     
     padding-bottom: 1em;
     margin-top: -6em;
+    padding-top: 1.5em;
 }
 
 #wrapper {
@@ -67,6 +73,7 @@ body {
     margin-left: 1em;
     margin-right: 1em;
     margin: 0 auto;
+    align-self: center;
     
 }
 
@@ -127,7 +134,7 @@ body {
 }
 
     
-#filter p {
+#filter_options p {
     
     display: inline-block;
     width: auto;
@@ -139,30 +146,48 @@ body {
 
 .submit_difficulty {
     
-    background-color: #89be59;
+    background-color: #66CC33;
     border: none;
     color: #fff;
     border-radius: 3px;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
     margin-right: 1em;
     margin-left: 1em;
 }
 
-.item h3 {
+.item h3 a {
     
     text-align: center;
     font-family: 'Comfortaa', cursive;
+    color: #66CC33;
+    padding-left: .2em;
+    padding-right: .2em;
+    text-decoration: none;
+}
+
+.item h3 a:hover {
+    
     color: #542344;
+    
 }
 
 .item {
     
     align-self: center;
     justify-content: center;
-    display: block;
+    display: grid;
     align-items: center;
+    min-height: 525px;
     margin: 0 auto;
     text-align: center;
     background-color: rgba(255,255,255, 0.8);
+}
+
+.item:hover {
+    
+    border: 0.5px solid #66CC33;
+    
 }
 
 .item p {
@@ -219,9 +244,10 @@ h2 {
 .nav a:hover, .home_nav a:hover {
     
     border-bottom: 2px solid #66cc33;
+    margin-bottom: -1px;
 }
 
-input .search {
+#search_style {
     
     background: none;
 	border-bottom: 2px solid #66CC33;
@@ -277,6 +303,11 @@ button:focus {
   cursor: pointer;
 }
 
+.search-container {
+    
+    display: table;
+}
+
 .topnav input[type=text] {
     padding: 3px;
     font-size: 17px;
@@ -295,15 +326,21 @@ p {
 #main_container {
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     background-color: rgba(255,255,255, 0.7);
     padding: 3em;
     padding-bottom: 10em;
     max-width: 1100px;
     margin: 0 auto;
-    grid-column-gap: 2em;   
+    grid-column-gap: 1em;   
     margin-top: 5em;
     border-radius: 25px 25px 0px 0px;
+}
+
+.top_section {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .left_cont img {
@@ -335,9 +372,16 @@ h4 {
     font-family: 'Comfortaa', cursive;
 }
 
+#directions {
+    
+    padding: 1em;
+    margin: 0 auto;
+
+}
+
 /* Help Page Styling */
 
-.help {
+.help,.search_results {
     
     max-width: 600px;
     margin: 0 auto;
@@ -359,6 +403,21 @@ h4 a {
 .search_item p {
     
     margin-top: -1.5em;
+}
+
+.left_cont #main_dish {
+    
+    width: 80%;
+    padding-bottom: 2em;
+    
+}
+
+.search_results {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: rgba(255,255,255,0.6);
 }
 
 .search_item {
@@ -397,6 +456,12 @@ h3 {
     
 }
 
+.result h3 {
+    
+    color: #66CC33;
+    font-size: 2em;
+}
+
 #no {
     
     font-size: 3em;
@@ -413,12 +478,11 @@ h3 {
     
     #main_container {
         
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
     }
     
     #main img {
         
-        display: none;
     }
     
     .home_nav {
@@ -460,7 +524,7 @@ h3 {
     
     #main {
     
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         
     }
 
@@ -476,6 +540,16 @@ h3 {
     #wrapper {
         
         grid-template-columns: 1fr 1fr;
+    }
+    
+    #main {
+        
+        grid-template-columns: 1fr;
+    }
+    
+    #main img {
+        
+        display: none;
     }
 
 
@@ -507,18 +581,35 @@ p {
     
     }
     
-    .item h3 {
+    h2 {
+        
+        font-size: 4em;
+    }
+    
+    #main img {
+        
+        display: none;
+    }
+    
+    .item h3 a {
     
     text-align: center;
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
     margin-bottom: .25em;
     text-align: left;
+     text-decoration: none;
     }
     
-    h3 a {
+    h3 {
         
         text-decoration: none;
+    }
+    
+    .nav a {
+        
+        max-width: 30%;
+        margin: 0 auto;
     }
     
     #top {
@@ -553,6 +644,14 @@ p {
         text-align: center;
     }
     
+    .top_section {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+}
+    
+
+    
     .nav a {
         
         display: block;
@@ -564,6 +663,7 @@ p {
         
         display: grid;
         grid-template-columns: 1fr 1fr;
+        min-height: 0;
     }
     
     .item p {
@@ -605,6 +705,22 @@ p {
         font-size: 2em;
     }
 
+}
+
+@media screen and (max-width: 700px) {
+    
+    #main_container {
+        
+        grid-template-columns: 1fr;
+        
+    }
+    
+    .right_cont h2 {
+        
+        font-size: 2.5em;
+    }
+    
+    
 }
 
 

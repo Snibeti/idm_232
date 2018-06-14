@@ -25,6 +25,7 @@ if (!$result) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,21 +46,30 @@ if (!$result) {
         <?php include "includes/_header.php"; ?>
     </div>
     
-	<!-- PAGE CONTENT -->
     <h2>Recipes</h2>
-           
-            <form action="recipe_filter.php" id="filter_options" method="POST">
+          
+          <form action="recipe_filter.php" id="filter_options" method="POST">
                <p>
-                <input type="radio" name="filter" value ="1"/>Easy
-                <input type="radio" name="filter" value ="2"/>Intermediate
-                <input type="radio" name="filter" value ="3"/>Advanced
+                <input class="radio_inp" type="radio" name="filter" value ="1"/>Easy
+                <input class="radio_inp" type="radio" name="filter" value ="2"/>Intermediate
+                <input class="radio_inp" type="radio" name="filter" value ="3"/>Advanced
                 <input  class="submit_difficulty" type="submit" name="formSubmit" value="Filter" />
                </p>
             </form>
+           <div id="wrapper">
             
-	<div id="wrapper">
-       <?php
-            while ($row = mysqli_fetch_assoc($result)) {
+    
+    <?php
+        
+            if(isset($_POST['filter'])){   
+        
+            $difficulty = $_POST['filter'];
+                   
+            $table = "recipes_main";
+            $query = "SELECT * FROM $table WHERE $difficulty = difficulty_level";
+            $result = mysqli_query($connection, $query);
+                
+    while ($row = mysqli_fetch_assoc($result)) {
         ?>
         <div class="item">
           <a href="recipe_page.php?id=<?php echo $row['recipe_id'];?>">
@@ -76,15 +86,11 @@ if (!$result) {
                 
             }
             mysqli_free_result($result);
+            }
         ?>
-	 
-    </div>
-    </div>
-	<!-- JAVASCRIPT-->
-	<script src="main.js"></script>
-</body>
-
-</html>
-
+         
+    </div>                      
+                    
+               
 
 <?php mysqli_close($connection); ?>

@@ -2,29 +2,16 @@
 <?php require_once "includes/db.php";
 
 
-    $table = "recipes_main";
-    $query = "SELECT * FROM $table";
-    $result = mysqli_query($connection, $query);
-
-if (!$result) {
-        
-        die("Database query failed");
-}
+//    $table = "recipes_main";
+//    $query = "SELECT * FROM $table";
+//    $result = mysqli_query($connection, $table);
     
 ?>
 <!DOCTYPE html>
 <html>     
 <head>
     <title>Snap Pea | Search Results</title>
-    <meta charset="utf-8">
-	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-	<!-- whatever the width of device, content matches it -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CSS -->
-	<link rel="stylesheet" href="normalize.css">
-	<link rel=icon href=img/favi.png>
-	<link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <?php include "includes/_head_info.php"; ?>
 </head>
 <body>
    <div id="top">
@@ -37,7 +24,11 @@ if (!$result) {
         <?php include "includes/_header.php"; ?>
     </div>
     
+    <div class="result">
     <h3>Results Found:</h3>
+    </div>
+     
+     <div class="search_results">
       
           <?php
               if (isset($_POST['submit_search'])){
@@ -71,6 +62,8 @@ if (!$result) {
                 
             } 
         ?>
+        
+    </div>
 </body>
 </html>
 
